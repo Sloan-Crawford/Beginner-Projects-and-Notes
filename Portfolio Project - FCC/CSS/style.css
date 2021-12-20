@@ -42,6 +42,10 @@
 
 /* General Styles */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--clr-light);
   color: var(--clr-dark);
@@ -144,8 +148,9 @@ h3 {
 
 header {
   display: flex;
+  background: rgb(240, 240, 255);
   justify-content: space-between;
-  padding: 1em;
+  padding: 0.5em;
 }
 
 .logo {
@@ -154,6 +159,8 @@ header {
 
 .nav {
   position: fixed;
+  height: 50%;
+  min-height: 200px;
   background: var(--clr-dark);
   color: var(--clr-light);
   top: 0;
@@ -190,6 +197,7 @@ header {
 
 .nav-toggle {
   padding: 0.5em;
+  margin-top: 0.5em;
   background: transparent;
   border: 0;
   cursor: pointer;
@@ -203,6 +211,22 @@ header {
   transform: translateX(0);
 }
 
+.nav-open .nav-toggle {
+  position: fixed;
+}
+
+.nav-open .hamburger {
+  transform: rotate(0.12turn);
+}
+
+.nav-open .hamburger::before {
+  transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+  opacity: 0;
+}
+
 .hamburger {
   display: block;
   position: relative;
@@ -211,7 +235,7 @@ header {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-  background: var(--clr-dark);
+  background: var(--clr-accent);
   width: 2em;
   height: 3px;
   border-radius: 1em;
@@ -455,4 +479,18 @@ header {
   margin: 2em auto 0;
   background: var(--clr-light);
   opacity: 0.3;
+}
+
+/* Individual Portfolio Item Styles */
+
+.portfolio-item-individual {
+  padding: 0 2em 2em;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.portfolio-item-individual p {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -1,0 +1,60 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+button {
+  background: red;
+  font-size: 40px;
+  color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+.three {
+  border: 3px solid grey;
+  background: lightyellow;
+  margin-top: 40px;
+}
+
+.first {
+  background: blue;
+  color: white;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+.second {
+  background: green;
+  position: relative;
+}
+.special {
+  background: lightcoral;
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* Media queries: used to change settings with different screen-sizes:
+syntax is important so pay attention to that */
+@media screen and (max-width: 576px) {
+  body {
+    background: red;
+  }
+  .first {
+    color: black;
+    font-size: 60px;
+  }
+}@media screen and (min-width: 768px) {
+  body {
+    background: green;
+  }
+  .first {
+    color: red;
+    font-size: 60px;
+    text-align: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+}

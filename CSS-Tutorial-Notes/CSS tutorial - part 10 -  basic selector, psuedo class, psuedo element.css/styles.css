@@ -1,0 +1,70 @@
+div h1 {
+  color: red;
+}
+
+/* 
+this is how to select for only the h1 that are DIRECT DESCENDANTS of the div using >
+*/
+div > h1 {
+  color: blue;
+}
+
+/* this will override the previous selectors because of specificity: */
+.header h1 {
+  color: green;
+}
+
+.header > h1 {
+  color: purple;
+}
+
+.first::first-line {
+  font-weight: bold;
+}
+
+.first::first-letter {
+  font-size: 3rem;
+}
+
+/* :hover */
+.first:hover {
+  color: red;
+}
+
+.header2:hover {
+  background: blue;
+  color: white;
+}
+a:hover {
+  text-decoration: none;
+}
+
+/* link pseudo elements */
+a:link {
+  color: aqua;
+}
+a:visited {
+  color: red;
+}
+a:hover {
+  color: blue;
+}
+a:active {
+  color: green;
+}
+
+/* root */
+/* 1rem === 16px as default unless user web browser settings have a different font size. So when I adjust the root settings, any rem value will change (responsive) where the absolute will not*/
+:root {
+  background: rgba(0, 10, 200, 0.2);
+  font-size: 150%;
+}
+.rootclass {
+  font-size: 3rem;
+}
+.absolute {
+  font-size: 24px;
+}
+.responsive {
+  font-size: 1.5rem;
+}

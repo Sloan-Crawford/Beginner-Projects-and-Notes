@@ -1,0 +1,120 @@
+/* transform : translate(), scale(), rotate(), skew() */
+
+div {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+}
+
+.one {
+  background: red;
+  /* can take pixels or % : */
+  transform: translateX(50%);
+  transform: scalex(0.5);
+  transform: skewX(10deg);
+}
+.two {
+  background: green;
+  /* first value is x axis, second is y axis: */
+  transform: translate(20px, 20px);
+  transform: scaleY(2);
+  /* rotate takes degrees (deg) : */
+  transform: rotateZ(45deg);
+}
+.three {
+  background: blue;
+  transform: scale(0.5, 0.5);
+  transform: skew(10deg, 20deg);
+}
+
+/* 
+transition = change happening over some period of time 
+/* transition property 
+/* transition duration 
+*/
+
+.four {
+  background: red;
+}
+.five {
+  background: green;
+}
+.six {
+  background: blue;
+  /* transition-property: background, border-radius; 
+  transition-duration: 6s;
+  transition-delay: 3s; 
+  a shortcut of these previous three lines:*/
+  /* transition: background 3s 2s, border-radius 5s 1s; */
+  /* or the shortest using the all syntax: */
+  transition: all 1s ease-in 0.3s;
+}
+/* pay attention to the syntax for a pseudoselector like hover: */
+.six:hover {
+  border-radius: 50%;
+  background: coral;
+}
+
+/* 
+how the transition takes place
+in shorthand the transition-timing-function goes where here is:
+transition:all 3s here 5s;
+ease = default
+ease = slow start, fast, slow end
+linear = same speed start to end
+ease-in = slow start
+ease-out = slow end
+ease-in-out = slow start, fast, slow end
+*/
+
+/* 
+transition 0 = 100%
+ANIMATION 0 1% 2% ...... 100%
+*/
+
+.transition,
+.animation {
+  width: 200px;
+  height: 100px;
+  color: white;
+  margin: 10px;
+}
+.transition {
+  background: red;
+  transition: all 2s linear;
+}
+.transition:hover {
+  background: yellow;
+  transform: translateX(100px);
+}
+.animation {
+  background: blue;
+  /* the animation name must match the @keyframes name below: */
+  animation-name: move;
+  animation-duration: 7s;
+  animation-iteration-count: 2;
+  /* the shorthand of the previous three lines:
+  animation: move 7s infinite; */
+  /* 
+animation-fill-mode: what values are applied by the animation outside the time it is executing 
+*/
+  animation-fill-mode: forwards;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateX(100px);
+    background: red;
+  }
+  75% {
+    transform: translateX(-200px);
+    background: yellow;
+  }
+  100% {
+    transform: translateX(20px);
+    background: green;
+  }
+}

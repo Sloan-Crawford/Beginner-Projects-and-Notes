@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 60px;
+  color: orange;
+}
+.banner {
+  background: url("./forest\ background.jpeg");
+  background-size: cover;
+  background-repeat: no repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+/* when facing issues with text not being visible with a background image: */
+/* place an overlay using a linear-gradient, and shortcut it */
+
+/* for background: put a linear-gradient, then a coma, and then the image. Then add the background elements in the same line, paying attention to order and syntax: */
+.header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./forest\ background.jpeg") center/cover no-repeat fixed;
+}
+
+/* external resources for linear-gradients: */
+/* Colorzilla.com = ultimate CSS Gradient Generator */

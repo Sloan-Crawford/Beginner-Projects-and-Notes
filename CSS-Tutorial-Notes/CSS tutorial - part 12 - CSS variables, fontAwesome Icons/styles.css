@@ -1,0 +1,64 @@
+/* 
+CSS VARIABLES aka Custom Properties
+hold a value and reuse it
+syntax:
+--varName:value 
+property:var(--varName)
+
+2 types of scope:
+:root{} === global (used all throughout the doc)
+element === local (just to one element)
+can be used with any property
+*/
+
+/* .heading {
+  color: #f15025;
+}
+.text {
+  color: #32ff0e;
+}
+.main-text {
+  color: #1213fa;
+}
+.second-heading {
+  color: #f15025;
+} */
+
+:root {
+  --primaryColor: #1313fa;
+  --secondaryColor: #f15025;
+  --mainTransition: all 0.4s linear;
+}
+.heading {
+  color: var(--primaryColor);
+}
+.second-heading {
+  color: var(--primaryColor);
+  transition: var(--mainTransition);
+}
+.second-heading:hover {
+  color: var(--secondaryColor);
+}
+div {
+  --primaryRed: red;
+}
+.main-text {
+  color: var(--primaryRed);
+}
+.third-heading {
+  color: var(--primaryRed);
+}
+
+/* 
+ICONS
+Font-Awesome Icons
+Free, Easy to get up running, simple syntax
+ */
+
+.fa-bicycle {
+  color: green;
+}
+.social-icon {
+  font-size: 4rem;
+  color: blue;
+}

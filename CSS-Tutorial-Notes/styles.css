@@ -1,0 +1,38 @@
+/* font-size font-family */
+/* font-stack generic family */
+/* text-align, text-indent */
+/* line-height, letter-spacing, word-spacing, text-transform, text-decoration */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.main {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: right;
+  text-transform: uppercase;
+  text-decoration: line-through;
+}
+.subheading {
+  font-family: "Courier New", Courier, monospace;
+  font-style: normal;
+  text-indent: 10rem;
+}
+.one {
+  font-weight: lighter;
+  font-style: italic;
+  line-height: 2.5em;
+}
+.two {
+  font-weight: bolder;
+  font-style: oblique;
+  letter-spacing: 2px;
+  word-spacing: 20px;
+  text-decoration: overline;
+  line-height: 2rem;
+}
+a {
+  font-size: 20px;
+  text-decoration: none;
+}
+/* search for google fonts on google chrome for tons of options */
+/* 2 ways to do it - linked through the html or imported directly into css style sheet */

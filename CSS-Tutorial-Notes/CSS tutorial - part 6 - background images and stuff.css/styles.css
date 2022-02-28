@@ -1,0 +1,46 @@
+/* last rule order */
+/* background-size */
+/* background-position */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+div {
+  min-height: 100vh;
+  color: green;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.big-img {
+  background: url("./forest\ background.jpeg");
+  background-size: cover;
+  /* background-position: center; */
+}
+.small-img {
+  border: 2px solid red;
+  background: url("./candle-small.jpeg");
+  /* the last line will be rendered due to last rule order when inputs contradict: */
+  /* background-repeat: repeat;
+  background-repeat: no-repeat; 
+  background-repeat: repeat-x;
+  background-repeat: repeat-y;
+  background-repeat: space;
+  background-repeat: round; */
+  background-repeat: no-repeat;
+  /* background-position: center;
+  background-position: bottom;
+  background-position: left;
+  background-position: top; */
+  background-position: 20% 50%;
+}
+.folder-img {
+  background: url("./images/bowl-folder\ image.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

@@ -11,4 +11,5 @@ The **Portfolio Project** is my first simple guided portfolio website. Missing a
 
 The **Basic Javascript Projects** include notes and reflections in each app.js file, which I expound upon in my youtube vlog.
 
-### See my journey from beginner to professional web developer: [Sloan's web dev journey vlog](https://www.youtube.com/playlist?list=PLzZ37-9URvZAHQKn8ukTB2YarkAvGUR3I).
+### See my journey from beginner to professional web developer: 
+[Sloan's web dev journey vlog](https://www.youtube.com/playlist?list=PLzZ37-9URvZAHQKn8ukTB2YarkAvGUR3I).

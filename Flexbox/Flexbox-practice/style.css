@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex-container {
+  /* height: 200px; */
+  display: flex;
+  /* flex-direction: row-reverse; */
+  /* flex-direction: column; row is the default */
+  background: #f4f4f4;
+  justify-content: space-around; /* works on main axis */
+  align-items: center; /* works on cross axis */
+
+  flex-wrap: wrap;
+  max-width: 900px;
+}
+
+.item {
+  flex: 1 0 200px;
+  /* width: 100px; */
+  height: 100px;
+  background: #254de4;
+  margin: 10px;
+  color: #fff;
+
+  display: flex; /* the flex item becomes a flex-container too */
+  justify-content: center;
+  align-items: center;
+}
+
+.item:nth-of-type(1) {
+  /* align-self works on flex item */
+  align-self: start;
+  /* order: 2; */
+  /* flex-grow: 1; */
+  max-width: 250px;
+}
+
+.item:nth-of-type(2) {
+  align-self: center;
+  /* order: 1; */
+  /* flex-basis: 200px; */
+  /* flex-grow: 2; */
+}
+
+.item:nth-of-type(3) {
+  align-self: end;
+  /* order: 3; */
+  /* flex-grow: 3; */
+}

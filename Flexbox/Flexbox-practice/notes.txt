@@ -1,0 +1,43 @@
+Flexbox:
+-is a one-dimensional layout model
+-provides a method to offer space distribution
+-allows for powerful ALIGNMENT capabilities
+
+One option:
+-use CSS Grid for overall layout of the page
+-use Flexbox for the inner elements
+
+Flex container:
+-the element that holds flex items
+-flex items are direct children of flex containers
+-container created with 'display: flex'
+-flex containers and items have different properties that can be adjusted
+
+Axes:
+-flex-direction automatically set to row (can be changed to column)
+
+Flex items can also be flex container:
+Simply add display: flex to the item, it becomes a flex container
+
+flex-wrap: wrap
+helps with responsiveness. If a flex-item can't fit, it wraps to the next line
+
+
+Responsive Widths:
+
+flex-basis: 
+-sets smallest individual width for flex-item
+
+flex-grow: 
+-default is 0. think of it as a grow rate. 1 is rate of 1, 2 is faster rate, etc.
+-covers the entire width of the flex-container
+
+flex-shrink:
+-opposite of flex-grow.
+-don't use it much at all.
+
+COMBINE GROW, SHRINK & BASIS:
+flex: (grow, shrink, basis)
+flex: 1, 0, 100px
+(grows at a rate of 1, shrink usually keep at 0, basis using desired units or often 0)
+-shorthand is flex: 1 (don't have to set shrink or basis if they are 0, which is often)

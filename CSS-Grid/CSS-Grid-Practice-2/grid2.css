@@ -1,0 +1,59 @@
+/* Grid template AREAS practice (not used often but effective)
+
+first, create the grid container
+create a text representation in quotes for grid-template-areas
+then, create grid areas for each selector by matching grid-area assignment to the grid-template-areas label in the grid container. this gets the positioning right.
+then, for sizing width, use grid-template-columns on the container
+then, for sizing height, use grid-template-rows on the container
+ */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  height: 100vh;
+
+  display: grid;
+  grid-template-areas:
+    'header header header'
+    'nav content sidebar'
+    'nav footer footer';
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 80px 1fr 70px; /* cool way to make middle row the remainder of space between two set heights for the first and third row */
+}
+
+header,
+footer,
+main,
+aside,
+nav {
+  background-color: steelblue;
+  color: #fff;
+  padding: 1.2rem;
+  border: 1px solid skyblue;
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: content;
+}
+
+aside {
+  grid-area: sidebar;
+}
+
+footer {
+  grid-area: footer;
+}

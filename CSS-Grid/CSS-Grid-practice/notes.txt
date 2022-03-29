@@ -1,0 +1,59 @@
+For effective CSS Grid use:
+
+-create a grid container and style the parent:
+ display:grid;
+
+-then define the columns and widths: NO GOOD
+grid-template-columns: 70% 30%;
+or 40% 30% 30% (any number of percent columns, doesn't need to add to 100%)
+DON'T USE - issues with margin and padding can happen
+
+-a better way to set up the grid is using fractions:
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-columns: repeat(3, 1fr);  [this is better syntax, repeat 3 times, 1fr]
+
+-to create spacing between columns/rows/both use gap:
+grid-column-gap: 1em;
+grid-row-gap: 1em;
+gap: 1em;
+
+-fixed heights: NO GOOD
+grid-auto-rows: 100px;
+
+-a better way to make flexible heights using the minmax function:
+grid-auto-rows: minmax(100px, auto);  
+[each grid item set to 100px, but will grow if content exceeds the given space]
+
+-Nesting/Sub-grids:
+same functionality of a grid within a grid, follow same steps...
+set parent to grid, define # of columns, height, gap
+set children style like border, padding, etc.
+
+-Justifying and Aligning items in grid (styling the parent container):
+justify-items: start;   [squishes each grid item content to left]
+justify-items: center;  [squishes each grid item content to center]
+justify-items: end;     [squishes each grid item content to right or end]
+justify-items: stretch; [fills full space of each item - this is default]
+
+align-items: start;     [squishes each grid item content to top]
+align-items: center;    [squishes each grid item content to center]
+align-items: end;       [squishes each grid item content to bottom or end]
+align-items: stretch;   [fills full space of each item - this is default]
+
+Justifying and Aligning items in grid (styling the grid items):
+align-self:   start, center, end, stretch;
+justify-self: start, center, end, stretch;
+
+-Important grid-item styling: change size, position:
+grid-column: 1/3;  [changes the size of the individual grid-item to span from column 1 to 3]
+grid-row: 1/3;     [changes the size of the individual grid-item to span from row 1 to 3 as well]
+grid-column: 3;    [locks the grid item to column 3]
+*grid items can overlap by setting their position
+
+
+Best Practices:
+-FRACTIONS for grid-template-columns
+-GAP for spacing
+-MINMAX for heights
+-Justify and Align parent container, then grid item if necessary
+-use grid-column to adjust size of individual grid items

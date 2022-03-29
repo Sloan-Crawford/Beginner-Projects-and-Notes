@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Practice</title>
+    <style>
+      .grid {
+        display: grid;
+        grid-template-columns: 70% 30%; /* use fractions instead */
+        /* grid-column-gap: 1em;
+        grid-row-gap: 1em; */
+        gap: 1em; /* sets both column and row gap */
+      }
+
+      .grid > div {
+        background: lightgray;
+        padding: 1em;
+      }
+
+      .grid > div:nth-child(odd) {
+        background: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis est non
+        doloribus dignissimos vitae impedit, deserunt mollitia, dolorum sequi
+        eveniet sint neque suscipit nisi magni quibusdam aliquid molestiae
+        dolorem voluptas debitis? Nam laudantium magni dignissimos repudiandae
+        veniam impedit nemo molestias tenetur eaque dolor quia totam nostrum
+        natus quae unde, ut, optio ipsum eveniet! Impedit aliquid, cupiditate
+        consequatur autem adipisci illo dolore unde ipsa officiis sapiente
+        temporibus accusamus? Esse provident voluptatem impedit! Voluptatum
+        illum unde quod fuga necessitatibus magni illo perspiciatis.
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero
+        dignissimos amet non dolor enim asperiores, minus praesentium velit
+        voluptas, numquam, dolorum sit. Ullam tempora aliquid dolores adipisci
+        maiores saepe rem?
+      </div>
+      <div>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis est non
+        doloribus dignissimos vitae impedit, deserunt mollitia, dolorum sequi
+        eveniet sint neque suscipit nisi magni quibusdam aliquid molestiae
+        dolorem voluptas debitis? Nam laudantium magni dignissimos repudiandae
+        veniam impedit nemo molestias tenetur eaque dolor quia totam nostrum
+        natus quae unde, ut, optio ipsum eveniet! Impedit aliquid, cupiditate
+        consequatur autem adipisci illo dolore unde ipsa officiis sapiente
+        temporibus accusamus? Esse provident voluptatem impedit! Voluptatum
+        illum unde quod fuga necessitatibus magni illo perspiciatis.
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero
+        dignissimos amet non dolor enim asperiores, minus praesentium velit
+        voluptas, numquam, dolorum sit. Ullam tempora aliquid dolores adipisci
+        maiores saepe rem?
+      </div>
+    </div>
+  </body>
+</html>

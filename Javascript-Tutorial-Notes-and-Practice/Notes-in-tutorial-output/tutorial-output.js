@@ -406,7 +406,7 @@ console.log(values_name);
 const person = {
  name: 'john',
  lastName: 'peters',
- age:40,
+ age: 40,
  education: false,
  married: true,
  siblings: ['anna', 'susan', 'peter'],
@@ -435,8 +435,7 @@ console.log(age);
 // while
 // Sets up conditions under which a loop executes
 // do while
-// Similar to the while loop, however, it executes at least once and performs a check at the end to
-// see if the condition is met to execute again
+// Similar to the while loop, however, it executes at least once and performs a check at the end to see if the condition is met to execute again
 // break
 // Used to stop and exit the cycle at certain conditions
 // continue
@@ -584,23 +583,24 @@ const dice = 3;
 // else if(dice ===2) {
 //  console.log('you got 2');
 // }
-// if(dice < 1 || dice > 6){
+// else {
 //  console.log('the dice exploded or something went wrong');
 // }
 
 // 3. solving using SWITCH (you'll see a lot of this in redux in React.js):
-switch (dice) {
+const dice2 = 2
+switch (dice2) {
  case 1:
   console.log('you got 1');
   break
-  case 2:
+case 2:
   console.log('you got 2');
   break
-  case 3:
-  console.log('you got 3');
+case 6:
+  console.log('you got 6');
   break
-  default:
-   console.log('the dice exploded or something went wrong');
+default:
+  console.log('the dice exploded or something went wrong');
 }
 
 
@@ -642,7 +642,7 @@ while(money < 10)
 let i;
 // syntax: for(variable name = starting point value; name = ending value; iteration) {code}
 for(i = 0; i < 10; i++) {
- console.log('and the number is: ' +i);
+ console.log('and the number is: ' + i);
 }
 
 // example 2 (with variable declared within for loop):

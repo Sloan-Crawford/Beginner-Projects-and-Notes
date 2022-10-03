@@ -896,7 +896,7 @@ console.log({
 // to check the type, use typof
 
 // gotcha:
-// when assigning primitive data type value to a varialbe any changes are made directly to that value, without affecting the original value.
+// when assigning primitive data type value to a variable any changes are made directly to that value, without affecting the original value.
 // when assigning non-primitive data type value to a variable is done by reference so any changes will affect the references. 
 
 // example:
